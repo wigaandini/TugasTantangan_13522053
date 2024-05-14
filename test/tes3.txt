@@ -1,4 +1,3 @@
-7
 0 12 10 infinity infinity infinity 12
 12 0 8 12 infinity infinity infinity
 10 8 0 11 3 infinity 9

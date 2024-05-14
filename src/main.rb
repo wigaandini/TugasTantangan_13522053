@@ -4,11 +4,11 @@ require 'matrix'
 def readFile(path)
   file = File.open(path)
   lines = file.readlines.map(&:chomp)
-  n = lines[0].to_i
+  n = lines.size  # Ukuran matriks
   adjMatrix = Array.new(n) { Array.new(n, Float::INFINITY) }
 
-  lines[1..].each_with_index do |line, i|
-    val = line.split.map { |x| x == "infinity" ? Float::INFINITY : x.to_f } # Ubah "infinity" ke Float::INFINITY
+  lines.each_with_index do |line, i|
+    val = line.split.map { |x| x == "infinity" ? Float::INFINITY : x.to_f }
     adjMatrix[i] = val
   end
 
@@ -76,7 +76,6 @@ title = <<ART
 ART
 
 puts title
-
 
 puts "Input the file that want to be loaded (e.g., tes.txt):"
 fileName = gets.chomp
