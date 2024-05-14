@@ -64,6 +64,20 @@ def getRoute(start, n, adjMatrix, memo)
   [start, *path]
 end
 
+title = <<ART
+ ___  ___  ___    ___  ___  _    _ _  ___  ___ 
+|_ _|/ __]| . \\  / __]| . || |  | | || __]| . \\
+ | | \\__ \\|  _/  \\__ \\| | || |_ | | || _] |   /
+ |_| [___/|_|    [___/`___'|___||__/ |___]|_\\_\\
+
+                  13522053
+                  
+                                               
+ART
+
+puts title
+
+
 puts "Input the file that want to be loaded (e.g., tes.txt):"
 fileName = gets.chomp
 file = File.join("..", "test", fileName)
