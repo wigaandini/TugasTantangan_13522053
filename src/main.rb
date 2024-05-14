@@ -8,7 +8,7 @@ def readFile(path)
   adjMatrix = Array.new(n) { Array.new(n, Float::INFINITY) }
 
   lines.each_with_index do |line, i|
-    val = line.split.map { |x| x == "infinity" ? Float::INFINITY : x.to_f }
+    val = line.split.map { |x| x == "infinity" ? Float::INFINITY : x.to_f } # Ubah infinity ke Float::INFINITY
     adjMatrix[i] = val
   end
 
@@ -17,7 +17,7 @@ end
 
 def TSP(i, s, adjMatrix, memo, startIdx)
   if s.empty?
-    return adjMatrix[i][startIdx].to_i  # Pastikan balik ke titik awal
+    return adjMatrix[i][startIdx]  # Pastikan balik ke titik awal
   end
   return memo[[i, s]] if memo.key?([i, s])
 
@@ -31,8 +31,8 @@ def TSP(i, s, adjMatrix, memo, startIdx)
     minCost = [minCost, cost].min
   end
 
-  memo[[i, s]] = minCost.to_i 
-  minCost.to_i
+  memo[[i, s]] = minCost
+  minCost
 end
 
 def getPath(i, s, adjMatrix, memo, startIdx)
