@@ -23,7 +23,7 @@ The program created is a solution for the Traveling Salesman Problem (TSP) using
 ## Requirements Program
 |   NO   |  Required Program                  |                           Reference Link                            |
 | :----: | ---------------------------------- |---------------------------------------------------------------------|
-|   1    | Ruby                               | [Java](https://www.ruby-lang.org/en/)                               | 
+|   1    | Ruby                               | [Ruby](https://www.ruby-lang.org/en/)                               | 
 
 
 ## How to Run The Program
