@@ -78,4 +78,4 @@ minCost = TSP(startIdx, Set.new((0...n).to_a - [startIdx]), adjMatrix, memo, sta
 route = getRoute(startIdx, n, adjMatrix, memo)
 route = route.map { |x| x + 1 } 
 
-puts "Most optimal route using TSP is [ #{route.join(' - ')} ] with cost #{minCost}"
+puts "Most optimal TSP route is [ #{route.join(' - ')} ] with cost #{minCost}"
